@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<pluginGroups>
+		<!-- <pluginGroup>com.snda.toolkit.plugins -->
+		<!-- </pluginGroup> -->
+		<pluginGroup>com.meidusa.toolkit.plugins
+		</pluginGroup>
+		<pluginGroup>org.mortbay.jetty</pluginGroup>
+	</pluginGroups>
+	<localRepository>E:\.m3\coins.txn.core.1.1.0</localRepository>
+
+	<servers>
+		<server>
+			<id>deployRelease</id>
+			<username>admin</username>
+			<password>scm1qaz!</password>
+		</server>
+
+		<server>
+			<id>deploySnapshot</id>
+			<username>admin</username>
+			<password>scm1qaz!</password>
+		</server>
+	</servers>
+
+	<profiles>
+		<profile>
+			<id>jdk-1.6</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.6</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>1.6</maven.compiler.source>
+				<maven.compiler.target>1.6</maven.compiler.target>
+				<maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
+			</properties>
+		</profile>
+		<profile>
+			<id>development</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>http://nexus.vfinance.cn:9081/content/groups/public
+					</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>internal</id>
+					<url>http://nexus.vfinance.cn:9081/content/repositories/public/
+					</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>deployRelease</id>
+					<url>http://nexus.vfinance.cn:9081/content/repositories/releases/
+					</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>deploySnapshot</id>
+					<url>http://nexus.vfinance.cn:9081/content/repositories/snapshots/
+					</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central</id>
+					<url>http://nexus.vfinance.cn:9081/content/groups/public
+					</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>internal-plugin</id>
+					<url>http://nexus.vfinance.cn:9081/content/repositories/public/
+					</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>development</activeProfile>
+	</activeProfiles>
+
+</settings>

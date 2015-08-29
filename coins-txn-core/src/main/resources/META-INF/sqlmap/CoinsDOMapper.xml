@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liulishuo.coins.dao.mapper.daomapper.CoinsDOMapper">
+	<!-- 列表时可定义返回数据域 -->
+	<resultMap id="BaseResultMap" type="com.liulishuo.coins.dao.dataobject.CoinsDO">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="coins" property="coinNum" jdbcType="INTEGER" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		id,user_id,coins
+	</sql>
+	<!-- 制单 -->
+	<insert id="insert" parameterType="com.liulishuo.coins.dao.dataobject.CoinsDO">
+		INSERT INTO
+		coins(
+		user_id,coins
+		)
+		VALUES
+		(
+		#{userId,jdbcType=BIGINT},
+		#{coinNum,jdbcType=INTEGER}
+		)
+	</insert>
+  	<select id="qryCoinsByUserId" parameterType="Long" resultType="INTEGER">
+		SELECT
+			coins
+		FROM
+			coins
+		WHERE
+			user_id=#{userId,jdbcType=BIGINT}
+	</select>
+	
+	<select id="isExistUser" parameterType="Long" resultType="INTEGER">
+		SELECT
+			count(*)
+		FROM
+			coins
+		WHERE
+			user_id=#{userId,jdbcType=BIGINT}
+	</select>
+	
+	<update id="updateCoinsByUserId"  parameterType="com.liulishuo.coins.dao.dataobject.CoinsDO" >
+     UPDATE coins SET coins = coins + #{coinNum,jdbcType=INTEGER}
+     WHERE user_id = #{userId,jdbcType=BIGINT};
+  </update>
+</mapper>

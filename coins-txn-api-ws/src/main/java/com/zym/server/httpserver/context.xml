@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<httpServer context="/ops">
+	<handler>
+		<handler-class>com.zym.server.httpserver.FirstHandler</handler-class>
+		<url-pattern>/jstack</url-pattern>
+	</handler>
+</httpServer>

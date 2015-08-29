@@ -1,0 +1,8 @@
+com\liulishuo\coins\basic\ReturnConst.class
+com\liulishuo\coins\dao\mapper\BaseSqlMapper.class
+com\liulishuo\coins\dao\mapper\SqlMapper.class
+com\vf\fsn\txn\service\impl\CoinsTxnServiceImpl.class
+com\vf\fsn\txn\service\CoinsTxnService.class
+com\liulishuo\coins\dao\dataobject\CoinsDO.class
+com\liulishuo\coins\dao\mapper\daomapper\CoinsDOMapper.class
+com\liulishuo\coins\dao\dataobject\AbstractDO.class
