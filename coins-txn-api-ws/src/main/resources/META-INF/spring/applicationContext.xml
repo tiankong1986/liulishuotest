@@ -17,22 +17,11 @@ xmlns:context="http://www.springframework.org/schema/context"
       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
 	default-autowire="byName">
 	<mvc:annotation-driven/>
-	<context:component-scan base-package="com.vf.fsn.txn.ws" />
+	<context:component-scan base-package="com.liulishuo.coins.txn.ws" />
 	<context:annotation-config />
-	<!-- <bean id="userCoinsService" class="com.vf.fsn.txn.ws.UserCoinsService" /> -->
-	<!-- <context:property-placeholder location="file:${config.root}/app.properties" /> -->
   	<import resource="classpath:META-INF/spring/coins-txn-service.xml" />
 	<import resource="classpath:META-INF/spring/coins-txn-dao-persistence.xml" />
 	<import resource="classpath:META-INF/spring/coins-txn-dao.xml" />
 	
-	<!-- <jaxrs:server id="serviceContainer" address="/jaxrs">
-		<jaxrs:serviceBeans>
-			<ref bean="userCoinsService" />
-		</jaxrs:serviceBeans>
-		<jaxrs:providers>  
-            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />  
-        </jaxrs:providers>
-	</jaxrs:server> -->
-	<!-- WebService的实现Bean定义 -->
 	
 	</beans>

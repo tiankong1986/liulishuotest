@@ -1,4 +1,4 @@
-package com.vf.fsn.txn.boot;
+package com.liulishuo.coins.ws.test;
 
 
 import java.io.BufferedReader;

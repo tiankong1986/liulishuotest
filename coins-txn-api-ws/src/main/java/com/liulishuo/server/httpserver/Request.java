@@ -1,9 +1,8 @@
-package com.zym.server.httpserver;
+package com.liulishuo.server.httpserver;
 
 
 import java.net.URI;
 /**
-
  */
 public interface Request {
 	public final static String GET = "GET";

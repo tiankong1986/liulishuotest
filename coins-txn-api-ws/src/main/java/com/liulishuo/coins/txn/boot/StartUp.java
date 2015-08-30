@@ -1,4 +1,4 @@
-package com.vf.fsn.txn.boot;
+package com.liulishuo.coins.txn.boot;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.zym.server.httpserver.MyHttpServer;
+import com.liulishuo.server.httpserver.MyHttpServer;
 
 @Configuration
 @ComponentScan

@@ -1,4 +1,4 @@
-package com.vf.fsn.txn.ws;
+package com.liulishuo.coins.txn.ws;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.zym.server.httpserver;
+package com.liulishuo.server.httpserver;
 
 
 import java.io.IOException;
@@ -7,7 +7,6 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 /**
-
  */
 public class MyHttpHandler implements HttpHandler {
 
