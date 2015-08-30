@@ -14,7 +14,7 @@
  	</parent>
 	<properties>
 	 <spring.boot.version>1.1.4.RELEASE</spring.boot.version>
-	 <start-class>com.vf.fsn.txn.boot.StartUp</start-class>
+	 <start-class>com.liulishuo.coins.txn.boot.StartUp</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
