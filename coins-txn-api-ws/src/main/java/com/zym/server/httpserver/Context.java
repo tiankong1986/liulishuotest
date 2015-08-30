@@ -8,12 +8,23 @@ import org.w3c.dom.Element;
 
 
 /**
- * 
+ * 应该从xml中读取。为了简单直接赋值
  */
 public class Context {
 	private static Map<String,HttpHandler> contextMap = new HashMap<String,HttpHandler>();
 	public static String contextPath = "";
 	public static void load(){
+		try{
+			contextPath="/ops";
+			Class<?> cls = Class.forName("com.zym.server.httpserver.FirstHandler");
+			Object newInstance = cls.newInstance();
+			if(newInstance instanceof HttpHandler){
+				contextMap.put(contextPath+"/jstack", (HttpHandler)newInstance);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		/*
 		try{
 			System.out.println(Context.class.getResource("/").getPath());
 //			Document doc = XmlUtils.load(Context.class.getResource("/").getPath()+"context.xml");
@@ -34,7 +45,7 @@ public class Context {
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
 	/**
