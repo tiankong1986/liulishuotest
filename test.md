@@ -13,7 +13,8 @@
 > 返回(json)
 
 ```JavaScript
-[{
+{
+"products":[{
 “product_id”:<产品Id>, 
 “title”:<产品名称>, 
 “period”: <期限>, 
@@ -26,14 +27,15 @@
 “product_end_at”:<产品结束时间>, 
 “status”:<状态>
 }…]
+}
 ```
 - 例如：
-[
-{“product_id”:1, “title”:“16030101”, “period”: 12, “interest_rate”:“0.15”, “collect_rate”:“0.75”, 
+{
+"products":[{“product_id”:1, “title”:“16030101”, “period”: 12, “interest_rate”:“0.15”, “collect_rate”:“0.75”, 
 “available_amount”:6000, “total_amount”:100000, “collect_start_at”:“2016-04-15 12:00:00”, “interest_start_at”:“2016-04-15 12:00:00”, 
 “product_end_at”:“2016-04-15 12:00:00”, “status”:1
-} …
-]
+} …]
+}
 
 
 ### URL
@@ -85,15 +87,17 @@
 
 ```JavaScript
 {
+“page_count”:<总页数>,
+"records":[{
 “product_id”:<产品Id>, 
 “user”:<用户名>, 
-“amount”: <金额>, 
-“invest_at”:<投资时间>, 
-“page_count”:<总页数>
+“amount”: <金额>
+}...]
 }
+
 ```
 - 例如：
-{“product_id”:1, “user”:“13916155765”, “amount”: 3000, “invest_at”:“2016-04-15 12:00:00”, “page_count”:20}
+{“page_count”:20,"records":[{“product_id”:1, “user”:“13916155765”, “amount”: 3000, “invest_at”:“2016-04-15 12:00:00”}...]}
 
 
 ### URL
